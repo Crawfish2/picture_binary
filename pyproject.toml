@@ -8,3 +8,26 @@ dependencies = [
     "numpy>=2.3.2",
     "opencv-python>=4.11.0.86",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.12",
+]
+
+[tool.ruff]
+target-version = "py312"
+
+ignore = [
+    "ERA", # : 役立つこともあるが、コメントアウトしていないコードも警告されるので無視する
+    "D",
+    "C90", # mccabe
+    "COM", # flake8-commas
+    "T20",
+    "ANN201",
+    "PLR2004",
+]
+
+line-length = 120
+select = [
+    "ALL"
+]
